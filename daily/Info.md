@@ -1,0 +1,4 @@
+- Full time bug bounty
+- 10 min slow down
+- Claude
+- HackerOne
