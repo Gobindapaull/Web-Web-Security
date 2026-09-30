@@ -2,3 +2,10 @@
 - 10 min slow down
 - Claude
 - HackerOne
+- Distract the mindset
+- 100000$
+- Header cookie
+- Path traversal
+- Brute force
+- Intruder
+- Coding job is finished
