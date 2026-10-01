@@ -9,3 +9,8 @@
 - Brute force
 - Intruder
 - Coding job is finished
+- Direct hunt
+- a lot of CTFs
+- 10-12 hours 6 months
+- Boring but effective
+- hackthebox
