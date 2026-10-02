@@ -14,3 +14,9 @@
 - 10-12 hours 6 months
 - Boring but effective
 - hackthebox
+- 4 hours maximum hunting
+- Android api based
+- Friday live stream
+- Long term investment
+- Passion
+- Not easy money
